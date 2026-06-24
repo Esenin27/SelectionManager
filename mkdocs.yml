@@ -1,0 +1,22 @@
+site_name: Selection Manager Documentation
+site_url: https://borsch200.github.io/ConstructionSystem/
+
+theme:
+  name: material
+  language: en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - search
+  - glightbox
+
+nav:
+  - Intro: intro.md
+  - Quick Start: index.md
+  - Advanced Settings: advanced-settings.md
+  - Selection Collisions: collisions.md
+  - Visual Style Settings: visual.md
+  - Updates: log.md
