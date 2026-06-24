@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Esenin27.github.io/SelectionManager/">
+      
+      
+        <link rel="prev" href="intro/">
+      
+      
+        <link rel="next" href="advanced-settings/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Selection Manager Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#selection-manager-quick-start-ue-57" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Selection Manager Documentation" class="md-header__button md-logo" aria-label="Selection Manager Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Selection Manager Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Selection Manager Documentation" class="md-nav__button md-logo" aria-label="Selection Manager Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Selection Manager Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#install-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install &amp; Enable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-add-the-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Add the manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hook-up-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hook up input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-object-selection-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Object Selection State
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-object-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Object Registration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-use-the-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Use the selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="collisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selection Collisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Style Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#install-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install &amp; Enable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-add-the-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Add the manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hook-up-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hook up input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-object-selection-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Object Selection State
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-object-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Object Registration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-use-the-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Use the selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="selection-manager-quick-start-ue-57">Selection Manager — Quick Start (UE 5.7+)</h1>
+<h2 id="install-enable">Install &amp; Enable</h2>
+<ol>
+<li>
+<p>In the Epic Games Launcher, go to the <strong>Library</strong> tab, search for <strong>Selection Manager</strong>, <br>
+click <strong>Install to Engine</strong>, and choose your engine version.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_01.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_01.png"></a></p>
+</li>
+<li>
+<p>In the editor: <strong>Edit → Plugins</strong>, search <strong>"Selection Manager"</strong>, tick <strong>Enabled</strong>, and restart the editor.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_02.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_02.png"></a></p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title"><strong>Example level</strong></p>
+<p>The plugin's <strong>Examples</strong> folder includes a ready-made level with everything already wired up and working. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_03.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_03.png"></a>
+If something does not work as expected, open the example level and compare it with your setup.
+Also, check the settings in the demo Blueprints. The Player Controller should have <strong>Show Mouse Cursor</strong>, <strong>Enable Click Events</strong>, and <strong>Enable Mouse Over Events</strong> enabled. Selectable objects should also have collision configured correctly.</p>
+</div>
+<p><br></p>
+<h2 id="1-add-the-manager">1. Add the manager</h2>
+<p>Add a <strong>Selection Manager Component</strong> to your <strong>Player Controller</strong>.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_04.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_04.png"></a>
+The Player Controller should have <strong>Show Mouse Cursor</strong>, <strong>Enable Click Events</strong>, and <strong>Enable Mouse Over Events</strong> enabled.
+<br><br></p>
+<h2 id="2-hook-up-input">2. Hook up input</h2>
+<p>Set up your input bindings</p>
+<div class="admonition tip">
+<p class="admonition-title">Input system</p>
+<p>I recommend using <strong>Enhanced Input</strong> <br>
+<strong>Enhanced Input</strong> is Unreal Engine's built-in modern input system <br>
+It is more flexible than the legacy input system and supports advanced input behavior <br>
+For more details, see: <a href="https://dev.epicgames.com/documentation/unreal-engine/enhanced-input-in-unreal-engine">Enhanced Input Documentation</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Demo Input</p>
+<p>You can copy the demo input setup from <code>BP_SM_Demo_Player_Controller</code> as a quick solution for testing.</p>
+</div>
+<p>Bind the Selection Manager functions as follows: <br>
+<strong>Pressed → <code>Start Selection</code></strong> <br>
+<strong>Canceled → <code>Interrupt Selection</code></strong> <br>
+<strong>Released → <code>Finish Selection</code></strong> <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_05.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_05.png"></a> </p>
+<p>Optional modifiers: <br>
+<code>Set Addition Selection Enabled</code> (Shift) to add to the selection <br>
+<code>Set Subtraction Selection Enabled</code> (Ctrl) to remove <br></p>
+<details class="note">
+<summary>Screenshot</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_06.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_06.png"></a> </p>
+</details>
+<p><br></p>
+<h2 id="3-object-selection-state">3. Object Selection State</h2>
+<p>Add the <strong>Selection Manager Interface</strong> to the Blueprint class you want to make selectable:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_07.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_07.png"></a> </p>
+<div class="admonition tip">
+<p class="admonition-title">Selectable actor types</p>
+<p>You can use any class derived from <code>Actor</code> as a selectable object, including <code>Pawn</code> and <code>Character</code> <br>
+This is useful for selectable units, buildings, and other gameplay objects. <br>
+You can select objects of different classes at the same time. </p>
+</div>
+<p><br> </p>
+<p>After adding the interface, the required functions will appear in the Blueprint. <br> 
+Double-click a function to implement it: <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_08.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_08.png"></a> </p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Direction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Set Object Selection State</code></td>
+<td>Manager → Object</td>
+<td>Called when the manager applies a new selection state to the object. Implement this function to update the object's visuals, such as selected or highlighted state.</td>
+</tr>
+<tr>
+<td><code>Get Object Selection State</code></td>
+<td>Object → Manager</td>
+<td>Returns the object's current selection state, allowing the manager to read it and stay in sync.</td>
+</tr>
+<tr>
+<td><code>Get Object Selection Index</code></td>
+<td>Deprecated</td>
+<td>Returns the object's selection index. Deprecated</td>
+</tr>
+<tr>
+<td><code>Get Object Formation Info</code></td>
+<td>Object → Manager</td>
+<td>Returns whether the object belongs to a formation and which formation it belongs to. Used for group or formation co-selection. This value is read during registration and refresh.</td>
+</tr>
+<tr>
+<td><code>Get Object Dynamic Collisions</code></td>
+<td>Object → Manager</td>
+<td>Returns the object's current marquee collision data each frame. This is only used when <code>Use Dynamic Collisions</code> is enabled, for example when collision depends on moving parts or bones.</td>
+</tr>
+</tbody>
+</table>
+<p>For the basic setup, you only need to implement <br>
+<code>Set Object Selection State</code> and <code>Get Object Selection State</code>. <br></p>
+<blockquote>
+<p>💡 You can see how the remaining functions work in the included examples. <br></p>
+</blockquote>
+<p>Create a <code>Selection State</code> variable. It has four possible states:</p>
+<video controls="" preload="metadata" width="512">
+  <source src="assets/videos/sm_doc_vid_01_web.mp4" type="video/mp4">
+</video>
+
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Full Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uSuH</code></td>
+<td>Un Selected and Un Highlighted</td>
+<td>The default visual state. The object is not selected, and neither the cursor nor the selection box is hovering over it.</td>
+</tr>
+<tr>
+<td><code>uSH</code></td>
+<td>Un Selected and Highlighted</td>
+<td>The object is not selected yet, but it is currently hovered by the cursor or covered by the selection box. This is typically used for hover preview or additive selection preview.</td>
+</tr>
+<tr>
+<td><code>SuH</code></td>
+<td>Selected and Un Highlighted</td>
+<td>The object is still selected, but the highlight has been removed. This state is used during subtractive selection preview.</td>
+</tr>
+<tr>
+<td><code>SH</code></td>
+<td>Selected and Highlighted</td>
+<td>The object is both selected and highlighted. This is the visual state for an already selected object.</td>
+</tr>
+</tbody>
+</table>
+<p>Next, configure your Actor's visuals for each selection state. <br>
+The Examples folder includes the <code>BP_SM_Demo_Unit</code> Blueprint, which contains a complete selection visual setup for all states.</p>
+<p>In the <code>Get Object Selection State</code> interface function, return the <code>Selection State</code> variable you created earlier. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_09.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_09.png"></a> </p>
+<p><br><br></p>
+<h2 id="4-object-registration">4. Object Registration</h2>
+<p>To make an object selectable, register it in the <strong>Selection Manager</strong>. <br>
+Only registered objects can participate in selection.</p>
+<p>If you have a small number of objects, you can register each object from its own Blueprint. <br> 
+In this case, you need to get a reference to the <strong>Selection Manager</strong>. <br>
+If you have many objects, or if they are controlled by a Player Controller or another manager, <br> 
+it is usually better to register them from that controller or manager. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_10.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_10.png"></a></p>
+<blockquote>
+<p>💡 You can call <code>Un Register Object</code> when the object is destroyed or when it should no longer be selectable.</p>
+</blockquote>
+<p><br><br></p>
+<h2 id="5-use-the-selection">5. Use the selection</h2>
+<p>Use <code>Get Selected Actors</code> to get all currently selected actors. <br>
+Use <code>Get Selected Actors by Class</code> to get only selected actors of a specific class, for example only units or only buildings. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_11.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_11.png"></a></p>
+<p>If you want to change an object's selection state manually, for example when clicking a unit icon, use one of the following functions: <br>
+<code>Set Object Selection State</code> / <code>Set Object Selected</code> / <code>Set Object Highlighted</code> / <code>Toggle Object Selection</code></p>
+<details class="note">
+<summary>Screenshot</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/sm_doc_12.png" data-desc-position="bottom"><img alt="-" src="assets/images/sm_doc_12.png"></a></p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
