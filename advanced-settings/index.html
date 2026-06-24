@@ -1,0 +1,1193 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Esenin27.github.io/SelectionManager/advanced-settings/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../collisions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Advanced Settings - Selection Manager Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Selection Manager Documentation" class="md-header__button md-logo" aria-label="Selection Manager Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Selection Manager Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced Settings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Selection Manager Documentation" class="md-nav__button md-logo" aria-label="Selection Manager Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Selection Manager Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Settings
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#marquee-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marquee Collision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marquee Collision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-object-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-object options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-manager-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Manager settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selection Manager settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marquee-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marquee Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-typse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Typse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selection Typse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formation-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formation selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection by Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugger-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugger Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selection Collisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Style Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#marquee-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marquee Collision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marquee Collision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-object-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-object options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-manager-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Manager settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selection Manager settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marquee-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marquee Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-typse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Typse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selection Typse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formation-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formation selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection by Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugger-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugger Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced-settings">Advanced Settings</h1>
+<div class="admonition tip">
+<p class="admonition-title">Example level</p>
+<p>You can see all Selection Manager features and usage examples in the example level, <br>
+located in the plugin's Content folder.</p>
+</div>
+<h2 id="marquee-collision">Marquee Collision</h2>
+<p>If you do not provide custom settings when registering an object, <strong>Simple Collision</strong> will be used for selection box detection by default.</p>
+<p>Simple Collision uses a single point at the center of the object. If this point is inside the selection box, the object will be selected. This is the most performant option, especially when you have many units.</p>
+<p>You can create more complex selection collisions in the settings if you need more accurate selection. See the example level for a working setup.</p>
+<p>For cursor selection, the plugin uses the object's own collision. Make sure the object's collision blocks the same trace channel that is set in the <strong>Selection Manager</strong> settings. By default, this is the <code>Visibility</code> channel.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Setting</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple</strong></td>
+<td><code>Use Simple Collision</code> (+ <code>Simple Collision Offset</code>)</td>
+<td>A single point at the object center. Fastest — best for large unit counts. Used automatically when no LODs are set.</td>
+</tr>
+<tr>
+<td><strong>Sphere LODs</strong></td>
+<td><code>Collision LODs</code></td>
+<td>One or more spheres (<code>Center Offset</code> + <code>Radius</code>) per LOD. LODs switch by camera distance (<code>Switching Distance LOD</code>). Precise selection for varied shapes.</td>
+</tr>
+<tr>
+<td><strong>Dynamic</strong></td>
+<td><code>Use Dynamic Collisions</code></td>
+<td>Collision returned every frame by <code>Get Object Dynamic Collisions</code>. For collision tied to moving parts or bones. Slowest.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_13.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_13.png"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tuning collision visually</p>
+<p>Assign <strong><code>BP_SM_Debugger</code></strong> to the manager's <strong>Debugger Class</strong> and enable <strong>Show Debug Collisions</strong> to see the spheres in play.
+The debugger also has an editor preview mode for authoring collision shapes and copy-pasting them into an object's <code>Collision LODs</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Collision Settings</p>
+<p>For more details, see: <a href="../collisions/">Collision Settings</a></p>
+</div>
+<h3 id="per-object-options">Per-object options</h3>
+<p>Other fields in the <code>Register Object</code> <strong>Settings</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Can Be Selected With Marquee</code></td>
+<td>Allow / disallow selection by the selection box.</td>
+</tr>
+<tr>
+<td><code>Can Be Selected Via Select All</code></td>
+<td>Include the object in <code>Select All</code>.</td>
+</tr>
+<tr>
+<td><code>Can Be Selected By Index</code></td>
+<td>Allow selection by <code>Select Objects By Index</code>.</td>
+</tr>
+<tr>
+<td><code>Selection Index</code></td>
+<td>The object's index for index-based selection.</td>
+</tr>
+<tr>
+<td><code>Selection Formation ID</code></td>
+<td>Group id for "select together" cohesion (see below). <code>-1</code> = ungrouped.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="selection-manager-settings">Selection Manager settings</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_14.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_14.png"></a></p>
+<h3 id="cursor">Cursor</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Trace Channel</code></td>
+<td>Collision channel used for cursor hits.</td>
+</tr>
+<tr>
+<td><code>Trace Complex</code></td>
+<td>Use per-poly mesh for cursor hits instead of simple collision.</td>
+</tr>
+<tr>
+<td><code>Highlight Object Under Cursor</code></td>
+<td>Auto-highlight the hovered object.</td>
+</tr>
+<tr>
+<td><code>Actor Hit Priority</code></td>
+<td>When both an actor and a component are hit, prefer the actor.</td>
+</tr>
+<tr>
+<td><code>Minimum Drag Distance</code></td>
+<td>Pixels the cursor must move before a click becomes a marquee drag.</td>
+</tr>
+<tr>
+<td><code>Disable Cursor Interaction</code></td>
+<td>Turn off cursor selection entirely (marquee only).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="marquee-tool">Marquee Tool</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Marquee Widget Class</code></td>
+<td>The selection-frame widget. Defaults to <code>WB_SM_MarqueeTool</code>; assign your own to restyle it.</td>
+</tr>
+<tr>
+<td><code>Enable Dynamic Object Highlighting</code></td>
+<td>Highlight objects inside the frame live while dragging.</td>
+</tr>
+<tr>
+<td><code>Snap Marquee Start Position</code></td>
+<td>Anchor the frame's start to the clicked world point, so you can keep selecting while the camera moves.</td>
+</tr>
+<tr>
+<td><code>Player Viewport Relative</code></td>
+<td>For player-attached widgets in split screen.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Widget</strong></p>
+<p>You can swap the marquee widget during gameplay with <code>Set Marquee Widget Class</code>.</p>
+</div>
+<p><br></p>
+<h3 id="general">General</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Orthographic Projection</code></td>
+<td>Enable when your camera is orthographic.</td>
+</tr>
+<tr>
+<td><code>Prevent Reselection Flicker</code></td>
+<td>Keeps the current selection on screen until a new selection is finalized, so it doesn't blink empty for a frame when you start selecting again.</td>
+</tr>
+<tr>
+<td><code>Player Controller Index</code></td>
+<td>Which player controller to use.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="selection-typse">Selection Typse</h2>
+<p>The plugin supports three independent object grouping systems:</p>
+<ul>
+<li><strong>Formation</strong> — if one unit is selected or highlighted, all units with the same <code>Formation ID</code> are also selected or highlighted.</li>
+<li><strong>Selection Group</strong> — RTS-style control groups. You can bind selected units or buildings to a hotkey using <strong>Ctrl + 1...9</strong>, and then select that group 
+by pressing the number key.</li>
+<li><strong>By Index</strong> — fast selection of units or buildings of the same type, <br>
+for example when double-clicking a unit or building.</li>
+</ul>
+<h3 id="formation-selection">Formation selection</h3>
+<p>When <strong><code>Select Entire Formation</code></strong> is enabled, hovering over or box-selecting any unit will highlight or select all units with the same <code>Formation ID</code>.</p>
+<p>A <code>Formation ID</code> value of <code>-1</code> means that the unit is not part of any formation. <br> </p>
+<p>Selection Manager functions for working with formations: <br> 
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_15.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_15.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Select Entire Formation</code></td>
+<td>Master toggle. When on, clicking / hovering / marqueeing any member selects the whole formation.</td>
+</tr>
+<tr>
+<td><code>Selection Formation ID</code></td>
+<td>The object's initial formation at registration. <code>-1</code> = ungrouped.</td>
+</tr>
+<tr>
+<td><code>Set Object Selection Formation</code></td>
+<td>Push a new formation at runtime (unit joins / leaves). <code>-1</code> to clear.</td>
+</tr>
+<tr>
+<td><code>Get Object Selection Formation</code></td>
+<td>Returns the object's current formation id, or <code>-1</code> if ungrouped or not registered.</td>
+</tr>
+<tr>
+<td><code>Get Object Formation Info</code></td>
+<td>The object reports whether it's in a formation and which one. Read at registration and on refresh — not every frame.</td>
+</tr>
+<tr>
+<td><code>Refresh Object Formation</code></td>
+<td>Re-pull one object's formation from its <code>Get Object Formation Info</code>.</td>
+</tr>
+<tr>
+<td><code>Refresh All Formations</code></td>
+<td>Re-pull formations for all registered objects at once.</td>
+</tr>
+<tr>
+<td><code>Get Selected Formation Indexes</code></td>
+<td>Returns the distinct formation IDs currently selected.</td>
+</tr>
+</tbody>
+</table>
+<p><code>Finish Selection</code> also returns <strong><code>Selected Formation Indexes</code></strong> in its result (filled only when <code>Select Entire Formation</code> is enabled).</p>
+<p>You also need to implement the <code>Get Object Formation Info</code> interface function by creating two variables.</p>
+<p>You can use these variables for your own gameplay logic. If you change their values at runtime, call the appropriate <code>Refresh</code> function in the <strong>Selection Manager</strong> to apply the changes. <br> 
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_16.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_16.png"></a></p>
+<p><br> </p>
+<h3 id="selection-groups">Selection Groups</h3>
+<p>You can create RTS-style control groups by pressing <strong>Ctrl + Number</strong> to assign the current selection to a group, and then pressing that number to select the group. <br> 
+You can also set up double-click selection, allowing the player to select all units or buildings of the same type. <br> 
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_27.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_27.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Make Selection Group</code></td>
+<td>Save the current selection under a number.</td>
+</tr>
+<tr>
+<td><code>Select Group</code></td>
+<td>Recall a previously saved group by its number.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selection-by-index">Selection by Index</h3>
+<p>Select every object of the same kind at once — for example, double-click one unit to select all units of that type. <br>
+When you register an object, set in its <strong>Settings</strong>: <br></p>
+<ul>
+<li><code>Selection Index</code> — a category ID, give the <strong>same index</strong> to everything you want selected together (infantry = <code>1</code>, cavalry = <code>2</code>).</li>
+<li><code>Can Be Selected By Index</code> — keep enabled, objects with it off are skipped.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The index is assigned at registration. To change it later, use <code>Set Object Selection Index</code> function</p>
+</div>
+<p>Call one of these on the <strong>Selection Manager</strong>: <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_28.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_28.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Select Objects By Index</code></td>
+<td>Select all registered objects with that index.</td>
+</tr>
+<tr>
+<td><code>Select Objects By Same Index</code></td>
+<td>Select everything sharing the given object's index - pass the clicked unit (great for double-click).</td>
+</tr>
+<tr>
+<td><code>Select Objects By Indexes</code></td>
+<td>Select several categories at once.</td>
+</tr>
+</tbody>
+</table>
+<p>Each has a <strong><code>Selection Only On Screen</code></strong> parameter: when on, only objects currently visible on screen are selected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Double-click selection by index</p>
+<p>When <code>Prevent Reselection Flicker</code> is enabled in Selection Manager settings, a double-click must call <code>Interrupt Selection</code> before <code>Select Objects By Same Index</code>.</p>
+</div>
+<p><br> </p>
+<h2 id="optimization">Optimization</h2>
+<p>For large numbers of selectable objects:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Throttle Marquee Highlight</code> + <code>Marquee Highlight Update Interval</code></td>
+<td>Update live marquee highlighting on an interval instead of every frame.</td>
+</tr>
+<tr>
+<td><code>Use Spatial Grid</code> <em>(experimental)</em></td>
+<td>Broad-phase grid for simple-collision marquee tests. Tune with <code>Cell Size</code>, <code>Selection Plane Z</code>, <code>Bounds Padding</code>, <code>Rebuild Interval</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="debugging">Debugging</h2>
+<p>The <strong>Selection Manager Component</strong> includes a debug mode that displays the collision data used for marquee selection. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_41.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_41.png"></a> <br></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Show Debug Collisions</code> + <code>Debugger Class</code></td>
+<td>Draw each object's selection collision / LODs in play.</td>
+</tr>
+<tr>
+<td><code>Show Debug Spatial Grid</code> + <code>Debug Spatial Grid Draw Time</code></td>
+<td>Draw occupied spatial-grid cells.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debugger-class">Debugger Class</h3>
+<p>Select <code>BP_SM_Debugger</code> as the debugger class. <code>BP_SM_Debugger</code> is included with the plugin. <br>
+You can adjust the visual style of the displayed collision volumes in the <code>BP_SM_Debugger</code> settings. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/sm_doc_40.png" data-desc-position="bottom"><img alt="-" src="../assets/images/sm_doc_40.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Modifying plugin assets</p>
+<p>If you want to modify any plugin asset, make a copy of it and move the copy to your project folder. <br>
+Otherwise, your changes may be lost when the plugin is updated.</p>
+</div>
+<p><br><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
