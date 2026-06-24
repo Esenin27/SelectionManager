@@ -4,7 +4,7 @@
 
 It's **Blueprint-first** (no C++ required) and works with any `Actor`, `Pawn`, `Character`, or scene component — units, buildings, props, mixed together. <br>
 
-Plugin on Fab: **[https://www.fab.com/listings/60701332-bc86-48ea-88ac-c13a145bf747](https://www.fab.com/listings/60701332-bc86-48ea-88ac-c13a145bf747)**
+Plugin on Fab: **[https://www.fab.com/listings/60701332-bc86-48ea-88ac-c13a145bf747](https://www.fab.com/listings/60701332-bc86-48ea-88ac-c13a145bf747)** <br>
 Video: **[YouTube](https://www.youtube.com/watch?v=saT9hurKPGQ)**
 
 !!! danger "**Examples**"
